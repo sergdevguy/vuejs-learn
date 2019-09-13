@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8">
+        <title> Портфолио </title> 
+        <meta name="description" content="Суть страницы в виде согласованного текста, не перечисление. 70-200 символов" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800"> 
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="css/main.css">
+    </head> 
+
+    <body>
+
+
+
+
+        <!--<div id="todo-list" class="todo-list-container">
+            <ul class="todo-list">
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ul>
+            <div class="buttons">
+                <button v-on:click="addChild">Добавить</button>
+                <button v-on:click="deleteLastChild">Удалить</button>
+            </div>
+        </div>-->
+
+
+
+
+        <div id="todo-list-2" class="todo-list-container">
+            <ul class="todo-list">
+                <li v-for="todo in todos" v-if="true">
+                    {{ todo.text }}
+                </li>
+            </ul>
+            <div class="buttons">
+                <input v-model="new_item">
+                <button v-on:click="addChild">Добавить</button>
+                <button v-on:click="deleteLastChild">Удалить</button>
+            </div>
+        </div>
+
+
+
+
+        <script src="js/main.js"></script>
+    </body> 
+</html>

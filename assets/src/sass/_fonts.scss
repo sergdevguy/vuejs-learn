@@ -1,0 +1,45 @@
+// Best info about web-fonts.
+// -------
+// https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=ru
+
+// Recommended converter for different font types.
+// -------
+// https://www.fontsquirrel.com/tools/webfont-generator
+
+// Font-weight helper.
+// -------
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 
+// 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+
+
+// Two names vars because we trying to find different names 
+// of font on user (local) computer.
+
+@mixin font($f-name, $f-name-another-var, $f-style, $f-weight, $f-url){
+    @font-face{
+        font-family: $f-name;
+        font-style: $f-style;
+        font-weight: $f-weight;
+        src: local($f-name), 
+             local($f-name-another-var),
+             url($f-url + $f-name + '.woff2') format('woff2'),
+             url($f-url + $f-name + '.woff') format('woff'),
+             url($f-url + $f-name + '.ttf') format('truetype'),
+             url($f-url + $f-name + '.eot') format('eot');
+    }
+}
+
+
+
+
+// Example font! Not exist.
+// @include font('Font name', 'Font-name', normal, 400, '../fonts/');

@@ -1,0 +1,16 @@
+.todo-list-container{
+    .todo-list{
+        width: 50%;
+        float: left;
+    }
+
+    .buttons{
+        width: 50%;
+        float: left;
+    }
+
+    button, input{
+        display: block;
+        width: 150px;
+    }
+}
